@@ -292,17 +292,49 @@
       
         
           
-          Node@(NodeJS)
-URL1url.parse(urlStr, [parseQueryString], [slashesDenoteHost])
+            <h1 id="Node"><a href="#Node" class="headerlink" title="Node"></a>Node</h1><p>@(NodeJS)</p>
+<h2 id="URL"><a href="#URL" class="headerlink" title="URL"></a>URL</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">url.parse(urlStr, [parseQueryString], [slashesDenoteHost])</div></pre></td></tr></table></figure>
+<blockquote>
+<p>输入URL字符串，返回一个对象<br>将第二个参数设置true则使用querystring模块来解析URl中的查询字符串部分，默认为false<br>将第三个参数设置为true来吧诸如//foo/bar这样的URL解析为{host:’foot’,pathname:’bar’}而不是{pathname:’//foo/bar’}，默认为false</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">url.format(urlobj)</div></pre></td></tr></table></figure>
+<blockquote>
+<p>输入一个URL对象，返回格式化后的URL字符串<br>说明</p>
+<ul>
+<li>href的属性会被忽略处理</li>
+<li>protocol无论是否有末尾的：会同意的处理<ul>
+<li>这些协议包括http，https，ftp，gopher，file后缀是://（冒号，斜杠，）</li>
+<li>所有其他的协议如mailto，xmpp，aim，sftp，foo等会加上后缀：(冒号)</li>
+</ul>
+</li>
+<li>auth如果有将会出现</li>
+<li>hostname如果host属性没被定义，则会使用此属性</li>
+<li>port如果host属性没被定义，则会使用此属性</li>
+<li>host优先使用，将会替代hostname和port</li>
+<li>pathname将会同样处理无论结尾是否有/</li>
+<li>search将会替代query属性</li>
+<li>query（object类型；详情看querystring）如果没有search，将会使用此属性</li>
+<li>search无论前面是否有?，都会同样处理</li>
+<li>hash无论前面是否有#(锚点)，都会同样处理<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">url.resolve(from,to)</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>给定一个基础URL路径，和一个hrefURL路径，合并成URL绝对路径，可以带锚点<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">url.resolve(&apos;http://www.baidu.com/&apos;,&apos;admin/Login&apos;)</div></pre></td></tr></table></figure></p>
+</blockquote>
+<p>##QueryString<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">querystring.stringify(obj, [sep], [eq])</div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>序列号一个对象到一个querystring，可以选择是否覆盖默认的分隔符（’&amp;’）和通配符(‘=’)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">querystring.stringify(&#123;foo:&apos;bar&apos;,baz:&apos;qux&apos;&#125;,&apos;;&apos;,&apos;:&apos;)</div><div class="line">//返回字符串</div><div class="line">&apos;foo:bar;baz:qux&apos;</div></pre></td></tr></table></figure></p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">querystring.parse(str,[sep],[eq],[options])</div></pre></td></tr></table></figure>
+<blockquote>
+<p>将一个querystring反序列化为一个对象，可以选择是否覆盖默认的分隔符(‘&amp;’)和通配符(‘=’)<br>    options对象可能包含maxKeys属性（默认1000），用来限制处理过的key的数量，设置0可以去除限制<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">querystring.parse(&apos;foo=bar&amp;baz=qux&amp;baz=quux&amp;corge&apos;)</div><div class="line">// returns</div><div class="line">&#123; foo: &apos;bar&apos;, baz: [&apos;qux&apos;, &apos;quux&apos;], corge: &apos;&apos; &#125;</div></pre></td></tr></table></figure></p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">querystring.escape</div></pre></td></tr></table></figure>
+<blockquote>
+<p>供querystring.stringify使用的转意函数，在必要的时候可以被重写<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">querystring.unescape</div></pre></td></tr></table></figure></p>
+<p>供querystrin.parse使用的反转意函数，在必要时可以被重写</p>
+</blockquote>
 
-输入URL字符串，返回一个对象将第二个参数设置true则使用querystring模块来解析URl中的查询字符串部分，默认为false将第三个参
-          ...
-
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/08/17/NodeJs笔记/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
         
       
     </div>
@@ -399,15 +431,6 @@ URL1url.parse(urlStr, [parseQueryString], [slashesDenoteHost])
                     <i class="fa fa-fw fa-github"></i>
                   
                   GitHub
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="https://coding.net/u/manleo" target="_blank" title="Coding">
-                  
-                    <i class="fa fa-fw fa-coding"></i>
-                  
-                  Coding
                 </a>
               </span>
             

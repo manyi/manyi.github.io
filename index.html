@@ -104,8 +104,8 @@
     fancybox: true,
     motion: true,
     duoshuo: {
-      userId: 0,
-      author: '博主'
+      userId: 3a46b3e402a7a7eee88419a235f9d6e3,
+      author: 'Leo'
     }
   };
 </script>
@@ -299,258 +299,17 @@
       
         
           
-            <h1 id="Node"><a href="#Node" class="headerlink" title="Node"></a>Node</h1><p>@(NodeJS)</p>
-<h2 id="URL"><a href="#URL" class="headerlink" title="URL"></a>URL</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">url.parse(urlStr, [parseQueryString], [slashesDenoteHost])</div></pre></td></tr></table></figure>
-<blockquote>
-<p>输入URL字符串，返回一个对象<br>将第二个参数设置true则使用querystring模块来解析URl中的查询字符串部分，默认为false<br>将第三个参数设置为true来吧诸如//foo/bar这样的URL解析为{host:’foot’,pathname:’bar’}而不是{pathname:’//foo/bar’}，默认为false</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">url.format(urlobj)</div></pre></td></tr></table></figure>
-<blockquote>
-<p>输入一个URL对象，返回格式化后的URL字符串<br>说明</p>
-<ul>
-<li>href的属性会被忽略处理</li>
-<li>protocol无论是否有末尾的：会同意的处理<ul>
-<li>这些协议包括http，https，ftp，gopher，file后缀是://（冒号，斜杠，）</li>
-<li>所有其他的协议如mailto，xmpp，aim，sftp，foo等会加上后缀：(冒号)</li>
-</ul>
-</li>
-<li>auth如果有将会出现</li>
-<li>hostname如果host属性没被定义，则会使用此属性</li>
-<li>port如果host属性没被定义，则会使用此属性</li>
-<li>host优先使用，将会替代hostname和port</li>
-<li>pathname将会同样处理无论结尾是否有/</li>
-<li>search将会替代query属性</li>
-<li>query（object类型；详情看querystring）如果没有search，将会使用此属性</li>
-<li>search无论前面是否有?，都会同样处理</li>
-<li>hash无论前面是否有#(锚点)，都会同样处理<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">url.resolve(from,to)</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>给定一个基础URL路径，和一个hrefURL路径，合并成URL绝对路径，可以带锚点<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">url.resolve(&apos;http://www.baidu.com/&apos;,&apos;admin/Login&apos;)</div></pre></td></tr></table></figure></p>
-</blockquote>
-<p>##QueryString<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">querystring.stringify(obj, [sep], [eq])</div></pre></td></tr></table></figure></p>
-<blockquote>
-<p>序列号一个对象到一个querystring，可以选择是否覆盖默认的分隔符（’&amp;’）和通配符(‘=’)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">querystring.stringify(&#123;foo:&apos;bar&apos;,baz:&apos;qux&apos;&#125;,&apos;;&apos;,&apos;:&apos;)</div><div class="line">//返回字符串</div><div class="line">&apos;foo:bar;baz:qux&apos;</div></pre></td></tr></table></figure></p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">querystring.parse(str,[sep],[eq],[options])</div></pre></td></tr></table></figure>
-<blockquote>
-<p>将一个querystring反序列化为一个对象，可以选择是否覆盖默认的分隔符(‘&amp;’)和通配符(‘=’)<br>    options对象可能包含maxKeys属性（默认1000），用来限制处理过的key的数量，设置0可以去除限制<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">querystring.parse(&apos;foo=bar&amp;baz=qux&amp;baz=quux&amp;corge&apos;)</div><div class="line">// returns</div><div class="line">&#123; foo: &apos;bar&apos;, baz: [&apos;qux&apos;, &apos;quux&apos;], corge: &apos;&apos; &#125;</div></pre></td></tr></table></figure></p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">querystring.escape</div></pre></td></tr></table></figure>
-<blockquote>
-<p>供querystring.stringify使用的转意函数，在必要的时候可以被重写<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">querystring.unescape</div></pre></td></tr></table></figure></p>
-<p>供querystrin.parse使用的反转意函数，在必要时可以被重写</p>
-</blockquote>
+          Node@(NodeJS)
+URL1url.parse(urlStr, [parseQueryString], [slashesDenoteHost])
 
-          
-        
-      
-    </div>
+输入URL字符串，返回一个对象将第二个参数设置true则使用querystring模块来解析URl中的查询字符串部分，默认为false将第三个参
+          ...
 
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/08/17/My-first-post/" itemprop="url">
-                  My first post
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-08-17T12:33:15+08:00" content="2016-08-17">
-              2016-08-17
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/08/17/My-first-post/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/17/My-first-post/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/08/17/hello-world/" itemprop="url">
-                  Hello World
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-08-17T11:44:13+08:00" content="2016-08-17">
-              2016-08-17
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/08/17/hello-world/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/17/hello-world/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-          
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/08/17/NodeJs笔记/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -618,7 +377,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-count">1</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -639,6 +398,44 @@
         
 
         <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/manyi/" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://coding.net/u/manleo" target="_blank" title="Coding">
+                  
+                    <i class="fa fa-fw fa-coding"></i>
+                  
+                  Coding
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/Manyi988" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.weibo.com/339085777" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
           
         </div>
 

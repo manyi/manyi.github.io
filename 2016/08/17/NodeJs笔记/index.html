@@ -96,7 +96,7 @@ URL1url.parse(urlStr, [parseQueryString], [slashesDenoteHost])
 URL1url.parse(urlStr, [parseQueryString], [slashesDenoteHost])
 
 输入URL字符串，返回一个对象将第二个参数设置true则使用querystring模块来解析URl中的查询字符串部分，默认为false将第三个参数设置为true来吧诸如//foo/bar这样的URL解析为{host:’foot’,pathnam">
-<meta property="og:updated_time" content="2016-08-17T04:43:33.989Z">
+<meta property="og:updated_time" content="2017-07-05T06:42:56.753Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="NodeJs笔记">
 <meta name="twitter:description" content="Node@(NodeJS)
@@ -188,6 +188,16 @@ URL1url.parse(urlStr, [parseQueryString], [slashesDenoteHost])
         </li>
       
         
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-about">
           <a href="/about" rel="section">
             
@@ -211,19 +221,9 @@ URL1url.parse(urlStr, [parseQueryString], [slashesDenoteHost])
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
             标签
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-commonweal">
-          <a href="/404.html" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
-            
-            公益404
           </a>
         </li>
       
@@ -282,6 +282,25 @@ URL1url.parse(urlStr, [parseQueryString], [slashesDenoteHost])
             </time>
           </span>
 
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/JavaScript/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
           
 
           
@@ -456,6 +475,13 @@ URL1url.parse(urlStr, [parseQueryString], [slashesDenoteHost])
             </a>
           </div>
 
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
           
 
           

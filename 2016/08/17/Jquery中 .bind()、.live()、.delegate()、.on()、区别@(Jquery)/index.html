@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="JavaScript," />
 
 
 
@@ -84,15 +84,19 @@
 
 
 
-<meta name="description" content="生活不易，怎敢轻易怠慢">
-<meta property="og:type" content="website">
-<meta property="og:title" content="ManLeo's Blog">
-<meta property="og:url" content="http://www.lysmy.cn/index.html">
+<meta name="description" content="Jquery中 .bind()、.live()、.delegate()、.on()、区别@(Jquery)@(Jquery)
+bind(type,[data],fn) 为每个匹配元素的特定事件绑定事件处理函数12345678$(&amp;quot;a&amp;quot;).bind(&amp;quot;click&amp;quot;,function()&amp;#123;alert(&amp;quot;ok&amp;quot;);&amp;#125;);li">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Jquery中 .bind()、.live()、.delegate()、.on()、区别@(Jquery)">
+<meta property="og:url" content="http://www.lysmy.cn/2016/08/17/Jquery中 .bind()、.live()、.delegate()、.on()、区别@(Jquery)/index.html">
 <meta property="og:site_name" content="ManLeo's Blog">
-<meta property="og:description" content="生活不易，怎敢轻易怠慢">
+<meta property="og:description" content="Jquery中 .bind()、.live()、.delegate()、.on()、区别@(Jquery)@(Jquery)
+bind(type,[data],fn) 为每个匹配元素的特定事件绑定事件处理函数12345678$(&amp;quot;a&amp;quot;).bind(&amp;quot;click&amp;quot;,function()&amp;#123;alert(&amp;quot;ok&amp;quot;);&amp;#125;);li">
+<meta property="og:updated_time" content="2017-07-05T06:17:27.332Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ManLeo's Blog">
-<meta name="twitter:description" content="生活不易，怎敢轻易怠慢">
+<meta name="twitter:title" content="Jquery中 .bind()、.live()、.delegate()、.on()、区别@(Jquery)">
+<meta name="twitter:description" content="Jquery中 .bind()、.live()、.delegate()、.on()、区别@(Jquery)@(Jquery)
+bind(type,[data],fn) 为每个匹配元素的特定事件绑定事件处理函数12345678$(&amp;quot;a&amp;quot;).bind(&amp;quot;click&amp;quot;,function()&amp;#123;alert(&amp;quot;ok&amp;quot;);&amp;#125;);li">
 
 
 
@@ -113,9 +117,9 @@
 
 
 
-  <link rel="canonical" href="http://www.lysmy.cn/"/>
+  <link rel="canonical" href="http://www.lysmy.cn/2016/08/17/Jquery中 .bind()、.live()、.delegate()、.on()、区别@(Jquery)/"/>
 
-  <title> ManLeo's Blog </title>
+  <title> Jquery中 .bind()、.live()、.delegate()、.on()、区别@(Jquery) | ManLeo's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -136,9 +140,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -225,9 +227,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
   
@@ -247,10 +249,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2016/08/17/Jquery中 .bind()、.live()、.delegate()、.on()、区别@(Jquery)/" itemprop="url">
-                  Jquery中 .bind()、.live()、.delegate()、.on()、区别@(Jquery)
-                </a>
+                Jquery中 .bind()、.live()、.delegate()、.on()、区别@(Jquery)
               
             
           </h1>
@@ -290,9 +289,7 @@
       
 
       
-        
-          
-            <h3 id="Jquery中-bind-、-live-、-delegate-、-on-、区别-Jquery"><a href="#Jquery中-bind-、-live-、-delegate-、-on-、区别-Jquery" class="headerlink" title="Jquery中 .bind()、.live()、.delegate()、.on()、区别@(Jquery)"></a>Jquery中 .bind()、.live()、.delegate()、.on()、区别@(Jquery)</h3><p>@(Jquery)</p>
+        <h3 id="Jquery中-bind-、-live-、-delegate-、-on-、区别-Jquery"><a href="#Jquery中-bind-、-live-、-delegate-、-on-、区别-Jquery" class="headerlink" title="Jquery中 .bind()、.live()、.delegate()、.on()、区别@(Jquery)"></a>Jquery中 .bind()、.live()、.delegate()、.on()、区别@(Jquery)</h3><p>@(Jquery)</p>
 <p>bind(type,[data],fn) 为每个匹配元素的特定事件绑定事件处理函数<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">$(&quot;a&quot;).bind(&quot;click&quot;,function()&#123;alert(&quot;ok&quot;);&#125;);</div><div class="line">live(type,[data],fn) 给所有匹配的元素附加一个事件处理函数，即使这个元素是以后再添加进来的</div><div class="line"></div><div class="line">$(&quot;a&quot;).live(&quot;click&quot;,function()&#123;alert(&quot;ok&quot;);&#125;);</div><div class="line">delegate(selector,[type],[data],fn) 指定的元素（属于被选元素的子元素）添加一个或多个事件处理程序，并规定当这些事件发生时运行的函数</div><div class="line"></div><div class="line">$(&quot;#container&quot;).delegate(&quot;a&quot;,&quot;click&quot;,function()&#123;alert(&quot;ok&quot;);&#125;)</div><div class="line">on(events,[selector],[data],fn) 在选择元素上绑定一个或多个事件的事件处理函数</div></pre></td></tr></table></figure></p>
 <p>差别：</p>
 <p>.bind()是直接绑定在元素上</p>
@@ -300,170 +297,59 @@
 <p>.delegate()则是更精确的小范围使用事件代理，性能优于.live()</p>
 <p>.on()则是最新的1.9版本整合了之前的三种方式的新事件绑定机制</p>
 
-          
+      
+    </div>
+
+    <div>
+      
         
+
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
     <footer class="post-footer">
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/08/17/NodeJs笔记/" itemprop="url">
-                  NodeJs笔记
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-08-17T12:42:22+08:00" content="2016-08-17">
-              2016-08-17
-            </time>
-          </span>
-
+        <div class="post-tags">
           
-
-          
-            
-          
-
-          
-
-          
-          
-
+            <a href="/tags/JavaScript/" rel="tag">#JavaScript</a>
           
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <h1 id="Node"><a href="#Node" class="headerlink" title="Node"></a>Node</h1><p>@(NodeJS)</p>
-<h2 id="URL"><a href="#URL" class="headerlink" title="URL"></a>URL</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">url.parse(urlStr, [parseQueryString], [slashesDenoteHost])</div></pre></td></tr></table></figure>
-<blockquote>
-<p>输入URL字符串，返回一个对象<br>将第二个参数设置true则使用querystring模块来解析URl中的查询字符串部分，默认为false<br>将第三个参数设置为true来吧诸如//foo/bar这样的URL解析为{host:’foot’,pathname:’bar’}而不是{pathname:’//foo/bar’}，默认为false</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">url.format(urlobj)</div></pre></td></tr></table></figure>
-<blockquote>
-<p>输入一个URL对象，返回格式化后的URL字符串<br>说明</p>
-<ul>
-<li>href的属性会被忽略处理</li>
-<li>protocol无论是否有末尾的：会同意的处理<ul>
-<li>这些协议包括http，https，ftp，gopher，file后缀是://（冒号，斜杠，）</li>
-<li>所有其他的协议如mailto，xmpp，aim，sftp，foo等会加上后缀：(冒号)</li>
-</ul>
-</li>
-<li>auth如果有将会出现</li>
-<li>hostname如果host属性没被定义，则会使用此属性</li>
-<li>port如果host属性没被定义，则会使用此属性</li>
-<li>host优先使用，将会替代hostname和port</li>
-<li>pathname将会同样处理无论结尾是否有/</li>
-<li>search将会替代query属性</li>
-<li>query（object类型；详情看querystring）如果没有search，将会使用此属性</li>
-<li>search无论前面是否有?，都会同样处理</li>
-<li>hash无论前面是否有#(锚点)，都会同样处理<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">url.resolve(from,to)</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>给定一个基础URL路径，和一个hrefURL路径，合并成URL绝对路径，可以带锚点<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">url.resolve(&apos;http://www.baidu.com/&apos;,&apos;admin/Login&apos;)</div></pre></td></tr></table></figure></p>
-</blockquote>
-<p>##QueryString<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">querystring.stringify(obj, [sep], [eq])</div></pre></td></tr></table></figure></p>
-<blockquote>
-<p>序列号一个对象到一个querystring，可以选择是否覆盖默认的分隔符（’&amp;’）和通配符(‘=’)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">querystring.stringify(&#123;foo:&apos;bar&apos;,baz:&apos;qux&apos;&#125;,&apos;;&apos;,&apos;:&apos;)</div><div class="line">//返回字符串</div><div class="line">&apos;foo:bar;baz:qux&apos;</div></pre></td></tr></table></figure></p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">querystring.parse(str,[sep],[eq],[options])</div></pre></td></tr></table></figure>
-<blockquote>
-<p>将一个querystring反序列化为一个对象，可以选择是否覆盖默认的分隔符(‘&amp;’)和通配符(‘=’)<br>    options对象可能包含maxKeys属性（默认1000），用来限制处理过的key的数量，设置0可以去除限制<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">querystring.parse(&apos;foo=bar&amp;baz=qux&amp;baz=quux&amp;corge&apos;)</div><div class="line">// returns</div><div class="line">&#123; foo: &apos;bar&apos;, baz: [&apos;qux&apos;, &apos;quux&apos;], corge: &apos;&apos; &#125;</div></pre></td></tr></table></figure></p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">querystring.escape</div></pre></td></tr></table></figure>
-<blockquote>
-<p>供querystring.stringify使用的转意函数，在必要的时候可以被重写<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">querystring.unescape</div></pre></td></tr></table></figure></p>
-<p>供querystrin.parse使用的反转意函数，在必要时可以被重写</p>
-</blockquote>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/08/17/NodeJs笔记/" rel="next" title="NodeJs笔记">
+                <i class="fa fa-chevron-left"></i> NodeJs笔记
+              </a>
+            
+          </div>
 
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -471,6 +357,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -490,8 +380,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://oc18sy2wd.bkt.clouddn.com/306688751789460194.jpg"
@@ -545,6 +444,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Jquery中-bind-、-live-、-delegate-、-on-、区别-Jquery"><span class="nav-number">1.</span> <span class="nav-text">Jquery中 .bind()、.live()、.delegate()、.on()、区别@(Jquery)</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -641,6 +551,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
